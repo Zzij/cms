@@ -1,0 +1,52 @@
+!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.divForm{
+	position: absolute;/*绝对定位*/
+	width: 500px;
+	height: 400px;
+	
+	text-align: center;/*(让div中的内容居中)*/
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -550px;
+	}
+	.btns { width:130px; 
+				height:40px;
+				background:url("") no-repeat left top; 
+				color:#FFF; }
+	.input1{ width:200px; 
+			 height:30px;
+			 margin-left: 2px}
+	.p1{ height:30px;
+		color: blue
+		}
+	.btn2{width:260px; 
+		  height:40px;
+		  background:url("") no-repeat left top; 
+		  color:#FFF;
+	}
+</style>
+</head>
+<body>
+	<div style="position:absolute;z-index:-1;width:100%;height:100%;">
+    	<img src="4bed2e738bd4b31c1eefce558dd6277f9f2ff809.jpg" width="100%" height="100%" />
+	</div>
+	<div  class="divForm">
+	<h1>欢迎登录</h1>
+	<form action="/cms01/login" method="post">
+		<p class="p1">用户名：<input  type="text" class="input1" name="username" /></p><br/>
+		<p class="p1">密码：<input type="password" class="input1" name="password" /></p><br/>
+		
+		<input type="submit" class="btns" value="登录" />
+		<input type="reset" class="btns" value="清空" /><br/><br/>
+		
+		<input type="button" class="btns" value="注册" >
+	</form>
+	</div>
+</body>
+</html>

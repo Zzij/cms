@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+
+  <error-page>
+  	<error-code>404</error-code>
+  	<location>/jsp/errorpage.jsp</location>
+  </error-page>
+  
+  <filter>
+  	<filter-name>CharasetFilter</filter-name>
+  	<filter-class>com.cms.filter.CharasetFilter</filter-class>
+
+  </filter>
+  <filter-mapping>
+  	<filter-name>CharasetFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter>
+  	<filter-name>LoginFilter</filter-name>
+  	<filter-class>com.cms.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>LoginFilter</filter-name>
+  	<url-pattern>/web/*</url-pattern>
+</filter-mapping>
+</web-app>
+  
