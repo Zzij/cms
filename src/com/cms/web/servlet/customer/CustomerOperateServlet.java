@@ -44,7 +44,19 @@ public class CustomerOperateServlet extends HttpServlet{
 			req.setAttribute("customerList", List);
 			req.getRequestDispatcher("/jsp/main.jsp").forward(req, resp);
 		}else if("1".equals(action)){
-			req.getParameter("  ");
+			Customer cus = new Customer();
+			String company = req.getParameter("custcompany");
+			String custname = req.getParameter("custname");
+			String contact = req.getParameter("custcontact");
+			cus.setCustCompany(company);
+			cus.setCustContact(contact);
+			cus.setCustId(id);
+			cus.setCustName(custname);
+			cusdao.update(cus);
+			List<Customer> List = cusdao.list();
+			req.setAttribute("customerList", List);
+			req.getRequestDispatcher("/jsp/main.jsp").forward(req, resp);
+			
 		}else{
 			req.getRequestDispatcher("/jsp/main.jsp").forward(req, resp);
 		}
